@@ -37,7 +37,7 @@
 
             System.Console.WriteLine("This is also same project but in other way\n");
 
-            System.Console.WriteLine("It is starting now...\n");
+            System.Console.WriteLine("\nIt is starting now...\n");
 
             System.Console.Write("Enter your age: ");
             string secondAgevalue=Console.ReadLine()!;
@@ -47,7 +47,7 @@
                                 ? "You can go to the army"
                                 : "You can not go to the army";
             System.Console.WriteLine(message);
-            System.Console.WriteLine("\n<--Thank you for yout attenton-->");
+            System.Console.WriteLine("\n<--Thank you for yout attenton-->\n");
         }
     }
 }
