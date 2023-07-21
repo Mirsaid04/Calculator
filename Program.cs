@@ -28,7 +28,7 @@
             string userAgeValue=Console.ReadLine()!;
             int ageValue=int.Parse(userAgeValue);
 
-            if (ageValue>=2218 && ageValue < 28)
+            if (ageValue>=18 && ageValue < 28)
             {
                 System.Console.WriteLine("Your age is eligible to go");
             }
