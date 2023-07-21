@@ -10,14 +10,14 @@ Have a look at Program.cs file and you can see how i used:
 * Arithmetic operations
 
 ## Demo
-![](./Assets/Screenshot%202023-07-20%20at%2020.41.06.png)
+![](./Assets/Jul-21-2023%2010-36-32.gif)
 
 ## New project ->
 
 * Used :  `if`. `else` statement 
 
 ## Demo
-![](./Assets/Screenshot%202023-07-20%20at%2021.36.04.png)
+![](./Assets/Screenshot%202023-07-21%20at%2010.37.38.png)
 
 ## New project 2 -> 
 
@@ -25,4 +25,4 @@ Have a look at Program.cs file and you can see how i used:
 
 Demo
 
-![](./Assets/Screenshot%202023-07-20%20at%2021.36.17.png)
+![](./Assets/Screenshot%202023-07-21%20at%2010.40.11.png)
