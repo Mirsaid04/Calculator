@@ -35,7 +35,7 @@ Have a look at `Program.cs` file and you can see how i used:
 
 V1.0
 
-This [version]() introduce us about basic part of calulation
+This [version](https://github.com/Mirsaid04/Calculator/tree/releases/v1.0) introduce us about basic part of calulation
 
 * Additon
 * Subtraction
@@ -47,7 +47,7 @@ You can click to ***green word*** to get full information about it
 
 v2.0
 
-This [version]() includes some minor improvements and extra features.
+This [version](https://github.com/Mirsaid04/Calculator/tree/releases/v2.0) includes some minor improvements and extra features.
 
 Features Added:
 
@@ -56,7 +56,7 @@ Features Added:
 
 v3.0 
 
-This [version]() is a final one and it is ready to use. I added many changes till this version , also i put extra implement to it. You may use any kind of number to find it's multiplication table 
+This [version/v3.0](https://github.com/Mirsaid04/Calculator/tree/releases/v3.0) is a final one and it is equal to main. I added many changes till this version , also i put extra implement to it. You may use any kind of number to find it's multiplication table 
 
  * Multiplication Table
 
