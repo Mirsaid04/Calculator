@@ -4,6 +4,7 @@
     {
         static void Main()
         {
+            try{
             string yesOrno="";
             do{
             Console.WriteLine("Welcome to  Calculator Application");
@@ -60,7 +61,12 @@
                     Console.WriteLine($"{outeriteration} * {iteration} = {outeriteration*iteration} ");
                 }
             }
-
+            }
+            catch(FormatException FormatException)
+            {
+                Console.WriteLine("Oops,We could not convert your input value.");
+                System.Console.WriteLine("Looks like the value you provided is not integer");
+            }
         }
     }
 }
