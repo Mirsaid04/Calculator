@@ -67,7 +67,6 @@
                 Console.WriteLine("Oops,We could not convert your input value.");
                 System.Console.WriteLine("Looks like the value you provided is not integer");
             }
-
         }
     }
 }
