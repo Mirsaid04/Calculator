@@ -4,40 +4,50 @@
     {
         static void Main()
         {
-            try{
             string yesOrno="";
             do{
-            Console.WriteLine("Welcome to  Calculator Application");
-            Console.Write("Enter first number: ");
-            int firstUservalue=int.Parse(Console.ReadLine()!);
 
-            System.Console.Write("Choose operation that you need [+ , - , * , / , % ]: ");
-            string operation = Console.ReadLine()!;
+            Calulate();
+            ShowGratitude();
 
-            Console.Write("Second number: ");
-            int secondUservalue=int.Parse(Console.ReadLine()!);
+            Console.WriteLine("Do you want to conitune : [y/n]");
+            yesOrno=Console.ReadLine()!;
+            }while(yesOrno=="y");
 
-            Console.WriteLine("\nConverting value in progress...\n");
+            ShowMultiplicationTable();
+        }
+    
+        static void Calulate()
+        {
+            string firstUservalue = GetUserValueByMessage("Welcome to  Calculator Application,\nEnter first number: ");
+            string operation = GetUserValueByMessage("Choose operation that you need [+ , - , * , / , % ]: ");
+            string secondUservalue = GetUserValueByMessage("Second number: ");
+
+            ReportProgress("\nConverting value in progress...\n");
+
             decimal firstNumber = Convert.ToDecimal(firstUservalue);
             decimal secondNumber = Convert.ToDecimal(secondUservalue);
             string template = $"{firstNumber} {operation} {secondNumber} =";
 
             decimal result = operation switch
             {
-                "+" => firstNumber + secondNumber,
-                "-" => firstNumber - secondNumber,
-                "*" => firstNumber * secondNumber,
-                "/" => firstNumber / secondNumber,
-                "%" => firstNumber % secondNumber,
+                "+" => Sum(firstNumber, secondNumber),
+                "-" => Subtract(firstNumber, secondNumber),
+                "*" => Multiply(firstNumber, secondNumber),
+                "/" => Divide(firstNumber, secondNumber),
+                "%" => CalculatorRemainder(firstNumber, secondNumber),
                 _ =>0
             };
             Console.WriteLine($"{template} {result}");
-            Console.WriteLine("\n<--Thank you for yout attenton-->\n");
+        }
 
-            Console.WriteLine("Do you want to conitune : [y/n]");
-            yesOrno=Console.ReadLine()!;
-            }while(yesOrno=="y");
+        static void ShowGratitude()
+        {
+             Console.WriteLine("\n<--Thank you for your attenton-->\n");
+        }
 
+        static void ShowMultiplicationTable()
+        {
             Console.WriteLine("\nWelcome to multiplication table");
             System.Console.WriteLine("Enter the number that you want to know it's multiplication table\n");
 
@@ -61,20 +71,41 @@
                     Console.WriteLine($"{outeriteration} * {iteration} = {outeriteration*iteration} ");
                 }
             }
-            }
-            catch(FormatException FormatException)
-            {
-                Console.WriteLine("Oops,We could not convert your input value.");
-                Console.WriteLine("Looks like the value you provided is not integer");
-            }
-            catch(OverflowException OverflowException)
-            {
-                Console.WriteLine("Value you provided was either too large or too small. ");
-            }
-            catch(Exception exception)
-            {
-                Console.WriteLine("Opps,something went wrong , contact support");
-            }
+        }
+
+        static decimal Sum(decimal firstnumber, decimal secondnumber)
+        {
+            return firstnumber + secondnumber;
+        }
+
+        static decimal Subtract(decimal firstnumber, decimal secondnumber)
+        {
+            return firstnumber - secondnumber;
+        }
+
+        static decimal Multiply(decimal firstnumber, decimal secondnumber)
+        {
+            return firstnumber * secondnumber;
+        }
+
+        static decimal Divide(decimal firstnumber, decimal secondnumber)
+        {
+            return firstnumber / secondnumber;
+        }
+
+        static decimal CalculatorRemainder(decimal firstnumber, decimal secondnumber)
+        {
+            return firstnumber % secondnumber;
+        }
+
+        static string GetUserValueByMessage(string message)
+        {
+            Console.Write(message);
+            return Console.ReadLine()!;
+        }
+        static void ReportProgress(string messages)
+        {
+            Console.WriteLine(messages);
         }
     }
 }
