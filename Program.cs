@@ -17,7 +17,7 @@
             ShowMultiplicationTable();
         }
     
-        static void Calulate()
+        static void Calculate()
         {
             string firstUservalue = GetUserValueByMessage("Welcome to  Calculator Application,\nEnter first number: ");
             string operation = GetUserValueByMessage("Choose operation that you need [+ , - , * , / , % ]: ");
