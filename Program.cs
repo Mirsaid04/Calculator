@@ -8,16 +8,16 @@ namespace Calculator
         static void Main()
         {
             var calculator = new CalculatR();
-            
-            string yesOrNo = "";
+
+            string yesOrno = "";
             do
             {
                 calculator.Calculate();
                 ReportR.ShowGratitude();
                 
                 Console.WriteLine("Do you want to continue : [y/n]");
-                yesOrNo = Console.ReadLine()!;
-            } while (yesOrNo == "y");
+                yesOrno = Console.ReadLine()!;
+            } while (yesOrno == "y");
 
             ReportR.ShowGratitude();
             calculator.ShowMultiplicationTable();
