@@ -31,6 +31,11 @@ Have a look at `Program.cs` file and you can see how i used:
 ![](./Assets/Jul-25-2023%2010-00-46.gif)
 
 
+## Refactored *main* to `Opp`
+
+![](./Assets/refactor-oop%20photos)
+
+
 ### Releases Note
 
 V1.0
@@ -62,7 +67,13 @@ This [version/v3.0](https://github.com/Mirsaid04/Calculator/tree/releases/v3.0),
 
   Enter any number to find it's multiplication table
 
-This [releases/v3.1](https://github.com/Mirsaid04/Calculator/tree/releases/v3.1) is the new one , I update it with new Methods , such as Void, You may check it with `Program.cs` file.
+This [features/refactor-oop](https://github.com/Mirsaid04/Calculator/tree/features/refactor-oop) is the new one , I used necessary features:
+
+* Methods
+* Classes
+
+Note: You can check it in order to click the green word.
+
 
 
 
