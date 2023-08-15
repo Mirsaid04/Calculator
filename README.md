@@ -33,6 +33,7 @@ Have a look at `Program.cs` file and you can see how i used:
 
 ## Refactored *main* to `Opp`
 
+
 ![](./Assets/refactor-oop%20photos)
 
 
