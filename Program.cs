@@ -14,6 +14,7 @@ namespace Calculator
             {
                 calculator.Calculate();
                 ReportR.ShowGratitude();
+                
                 Console.WriteLine("Do you want to continue : [y/n]");
                 yesOrNo = Console.ReadLine()!;
             } while (yesOrNo == "y");
