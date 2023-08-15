@@ -1,26 +1,35 @@
+using System.Runtime.CompilerServices;
+
 namespace Calculator.Classes;
 
     public class CalculatR
     {
-       public void Calculate()
+        public decimal Firstvalue { get; set; }
+        public decimal SecondValue { get; set; }
+        public string Operation { get;set; }
+
+        public CalculatR()
         {
             string firstUservalue = ValueManipulatR.GetUserValueByMessage("Welcome to  Calculator Application,\nEnter first number: ");
-            string operation = ValueManipulatR.GetUserValueByMessage("Choose operation that you need [+ , - , * , / , % ]: ");
+            this.Operation=ValueManipulatR.GetUserValueByMessage("Choose operation that you need [+ , - , * , / , % ]: ");
             string secondUservalue = ValueManipulatR.GetUserValueByMessage("Second number: ");
-
+            this.Firstvalue = Convert.ToDecimal(firstUservalue);
+            this.SecondValue = Convert.ToDecimal(secondUservalue);
+        }
+        
+       public void Calculate()
+        {
             ReportR.ReportProgress("\nConverting value in progress...\n");
 
-            decimal firstNumber = Convert.ToDecimal(firstUservalue);
-            decimal secondNumber = Convert.ToDecimal(secondUservalue);
-            string template = $"{firstNumber} {operation} {secondNumber} =";
+            string template = $"{this.Firstvalue} {this.Operation} {this.SecondValue} =";
 
-            decimal result = operation switch
+            decimal result = this.Operation switch
             {
-                "+" => Sum(firstNumber, secondNumber),
-                "-" => Subtract(firstNumber, secondNumber),
-                "*" => Multiply(firstNumber, secondNumber),
-                "/" => Divide(firstNumber, secondNumber),
-                "%" => CalculatorRemainder(firstNumber, secondNumber),
+                "+" => Sum(this.Firstvalue,this.SecondValue),
+                "-" => Subtract(this.Firstvalue,this.SecondValue),
+                "*" => Multiply(this.Firstvalue,this.SecondValue),
+                "/" => Divide(this.Firstvalue,this.SecondValue),
+                "%" => CalculatorRemainder(this.Firstvalue,this.SecondValue),
                 _ =>0
             };
             ReportR.ReportResult($"{template} {result}");
