@@ -14,4 +14,12 @@ namespace Calculator.Classes;
         {
             Console.WriteLine(result);
         }
+
+        public static int choseedNumberConverted()
+        {
+            int firstOption=0;
+            return firstOption = int.Parse(Console.ReadLine());
+        }
+        
+        
     }
