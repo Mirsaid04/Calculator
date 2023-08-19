@@ -8,7 +8,8 @@ namespace Calculator
     public class Program
     {
          static void Main()
-        {
+         {
+             IReportingContract reportR = new ReportR();
             string yesOrno = "";
             do
             {
@@ -24,25 +25,32 @@ namespace Calculator
                         decimal secondNumber = ValueManipulatR.GetUserValueByMessage("\nPlease enter the Percent: ");
                         var calculator = new AdvancedCalculator(firstNumber,option,secondNumber);
                         break;
-
                     }
                     else
                     {
                         decimal secondNumber = ValueManipulatR.GetUserValueByMessage("\nSecond number: ");
                         var calculatR = new CalculatR(firstNumber, option, secondNumber);
                         break;
-
                     }
-                case 2 :MultiplicationTableR.ShowMultiplicationTable();
-                    ReportR.ShowGratitude();
+                
+                case 2 :
+                    MultiplicationTableR.ShowMultiplicationTable();
+                    reportR.ShowGratitude();
+                    break;
+                
+                case 3 :
+                    ReportR.Exit();
                     break;
             }
-                
+            
+            Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Do you want to continue : [y/n]");
                 yesOrno = Console.ReadLine()!;
+            Console.ResetColor();
             } while (yesOrno == "y");
+            
+            ReportR.Exit();
 
-            ReportR.ShowGratitude();
             
         }
     }
