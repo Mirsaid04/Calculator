@@ -15,7 +15,7 @@ public static class ValueManipulatR
         
         public static void ShowMenu()
         {
-            Console.Write("\nWelcome.\n1.Calculator" +
+            Console.Write("\nWelcome to my application\n1.Calculator" +
                           "\n2.Multiplicator" +
                           "\n3.Exit" +
                           "\nChoice: ");

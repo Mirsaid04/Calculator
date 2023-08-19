@@ -1,25 +1,27 @@
 namespace Calculator.Classes;
 
-    public static class ReportR
+    internal class ReportR : IReportingContract
     {
-        public static void ShowGratitude()
+        public void ShowGratitude()
         {
-            Console.WriteLine("\n<--Thank you for your attenton-->\n");
-        } 
-        public static void ReportProgress(string messages)
-        {
-            Console.WriteLine(messages);
-        }
-        public static void ReportResult(string result)
-        {
-            Console.WriteLine(result);
-        }
+            Console.WriteLine("Thank you for using my application");
 
+        }
+        public void ReportProgress(string messages)
+        {
+            throw new NotImplementedException();
+        }
+        public void ReportResult(string result)
+        {
+            throw new NotImplementedException();
+        }
         public static int choseedNumberConverted()
         {
             int firstOption=0;
             return firstOption = int.Parse(Console.ReadLine());
         }
-        
-        
+        public static void Exit()
+        {
+            Console.WriteLine("Thanks for using my application");
+        }
     }
