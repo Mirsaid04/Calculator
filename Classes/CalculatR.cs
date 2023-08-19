@@ -7,7 +7,8 @@ public class CalculatR
     public decimal Firstvalue { get; set; }
     public string Operation { get; set; }
     public decimal SecondValue { get; set; }
-
+    
+    IReportingContract reporter = new AdvancedReportR();
     public CalculatR(decimal firstNumber, string option, decimal secondNumber)
     {
         Firstvalue = firstNumber;
@@ -15,22 +16,12 @@ public class CalculatR
         Operation = option;
         Calculate();
     }
-
-    // public CalculatR()
-    // {
-    //     string firstUservalue = ValueManipulatR.GetUserValueByMessage("Welcome to  Calculator Application,\nEnter first number: ");
-    //     this.Operation=ValueManipulatR.GetUserValueByMessage("Choose operation that you need [+ , - , * , / , % ]: ");
-    //     string secondUservalue = ValueManipulatR.GetUserValueByMessage("Second number: ");
-    //     this.Firstvalue = Convert.ToDecimal(firstUservalue);
-    //     this.SecondValue = Convert.ToDecimal(secondUservalue);
-    // }
-    //
     public virtual void Calculate()
     {
-        ReportR.ReportProgress("\nConverting value in progress...\n");
+        reporter.ReportProgress("\nConverting value in progress...\n");
 
         string template = $"{this.Firstvalue} {this.Operation} {this.SecondValue} =";
-
+        
         decimal result = this.Operation switch
         {
             "+" => Sum(this.Firstvalue, this.SecondValue),
@@ -40,7 +31,9 @@ public class CalculatR
             "%" => CalculatorRemainder(this.Firstvalue, this.SecondValue),
             _ => 0
         };
-        ReportR.ReportResult($"{template} {result}");
+        Console.ForegroundColor = ConsoleColor.Blue;
+        reporter.ReportResult($"{template} {result}");
+        Console.ResetColor();
     }
 
     static decimal Sum(decimal firstnumber, decimal secondnumber)
