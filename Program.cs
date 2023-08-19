@@ -48,10 +48,6 @@ namespace Calculator
                 yesOrno = Console.ReadLine()!;
             Console.ResetColor();
             } while (yesOrno == "y");
-            
-            ReportR.Exit();
-
-            
         }
     }
 }
