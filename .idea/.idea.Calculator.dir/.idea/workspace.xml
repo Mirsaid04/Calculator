@@ -7,7 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ac831a4-92e3-46e0-9783-2d57bff4107a" name="Changes" comment="Add-New-Opp-Documentation" />
+    <list default="true" id="8ac831a4-92e3-46e0-9783-2d57bff4107a" name="Changes" comment="Add-New-Opp-Documentation">
+      <change afterPath="$PROJECT_DIR$/Interface/IMultiplicationTabler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/MultiplicationTableR.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/MultiplicationTableR.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/ReportingContract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/IReportingContract.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,16 +22,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "searchQuery": "This is the framework which is refactored to Opp"
+      &quot;searchQuery&quot;: &quot;This is the framework which is refactored to Opp&quot;
     }
   ],
-  "lastFilter": {
-    "searchQuery": "This is the framework which is refactored to Opp"
+  &quot;lastFilter&quot;: {
+    &quot;searchQuery&quot;: &quot;This is the framework which is refactored to Opp&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -38,14 +44,41 @@
     <setting file="mock:///Users/mirsaid/Desktop/Calculator/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mirsaid/Desktop/Calculator/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2UOEVRhUCwNLITftsEeyxtJsJmv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "features/refactor-oop",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add-interface&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/mirsaid/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/mirsaid/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/mirsaid/.local/share/Symbols/src&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Add-First-Stage">
       <option name="closed" value="true" />
@@ -79,8 +112,20 @@
       <option name="project" value="LOCAL" />
       <updated>1692070630243</updated>
     </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ac831a4-92e3-46e0-9783-2d57bff4107a" name="Changes" comment="Add-New-Opp-Documentation" />
+      <created>1692802252284</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692802252284</updated>
+      <workItem from="1692802254077" duration="1736000" />
+      <workItem from="1693038272665" duration="611000" />
+    </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +140,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Add-First-Stage" />
     <MESSAGE value="Refactor-Program-Into-Opp" />
     <MESSAGE value="Assets" />
