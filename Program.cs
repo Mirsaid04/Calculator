@@ -3,19 +3,17 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Calculator.Classes;
 
-namespace Calculator
+internal abstract class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-         static void Main()
-         {
-            string yesOrno = "";
-            do
-            {
-                IValueManipulator valueManipulator = new ValueManipulatR();
-                IReportingContract reportR = new ReportR();
-                IMultiplicationTableR multiplicationTable = new MultiplicationTableR();
-                valueManipulator.ShowMenu();
+        string yesOraNo = "";
+        do
+        {
+            IValueManipulator valueManipulator = new ValueManipulatR();
+            IReportingContract reportR = new ReportR();
+            IMultiplicationTableR multiplicationTable = new MultiplicationTableR();
+            valueManipulator.ShowMenu();
                 
             int choiceOfOption = ReportR.choseedNumberConverted();
             switch (choiceOfOption)
@@ -32,7 +30,7 @@ namespace Calculator
                     else
                     {
                         decimal secondNumber = valueManipulator.GetUserValueByMessage("\nSecond number: ");
-                        var calculatR = new CalculatR(firstNumber, option, secondNumber);
+                        new CalculatR(firstNumber, option, secondNumber);
                         break;
                     }
                 
@@ -47,10 +45,9 @@ namespace Calculator
             }
             
             Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Do you want to continue : [y/n]");
-                yesOrno = Console.ReadLine()!;
+            Console.WriteLine("Do you want to continue : [y/n]");
+            yesOraNo = Console.ReadLine()!;
             Console.ResetColor();
-            } while (yesOrno == "y");
-        }
+        } while (yesOraNo == "y");
     }
 }
