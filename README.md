@@ -31,7 +31,7 @@ Have a look at `Program.cs` file and you can see how i used:
 ![](./Assets/Jul-25-2023%2010-00-46.gif)
 
 
-## Used `Opp`
+## Used `Oop`
 
 ![](./Assets/refactor-oop%20photos)
 
