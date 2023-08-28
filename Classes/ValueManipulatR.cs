@@ -1,19 +1,19 @@
 namespace Calculator.Classes;
 
-public static class ValueManipulatR
+internal  class ValueManipulatR : IValueManipulator
     {
-        public static decimal GetUserValueByMessage(string message)
+        public  decimal GetUserValueByMessage(string message)
         {
             Console.Write(message);
             return decimal.Parse(Console.ReadLine());
         }
-        public static string GetInputByMessageToAction(string message)
+        public  string GetInputByMessageToAction(string message)
         {
             Console.Write(message);
             return Console.ReadLine();
         }
         
-        public static void ShowMenu()
+        public  void ShowMenu()
         {
             Console.Write("\nWelcome to my application\n1.Calculator" +
                           "\n2.Multiplicator" +

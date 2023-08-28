@@ -3,38 +3,39 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Calculator.Classes;
 
-namespace Calculator
+internal abstract class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-         static void Main()
-         {
-             IReportingContract reportR = new ReportR();
-            string yesOrno = "";
-            do
-            {
-                ValueManipulatR.ShowMenu();
+        string yesOraNo = "";
+        do
+        {
+            IValueManipulator valueManipulator = new ValueManipulatR();
+            IReportingContract reportR = new ReportR();
+            IMultiplicationTableR multiplicationTable = new MultiplicationTableR();
+            valueManipulator.ShowMenu();
+                
             int choiceOfOption = ReportR.choseedNumberConverted();
             switch (choiceOfOption)
             {
                 case 1 :
-                    decimal firstNumber = ValueManipulatR.GetUserValueByMessage("Welcome to  Calculator Application,\nEnter first number: ");
-                    string option=ValueManipulatR.GetInputByMessageToAction("Choose operation that you need [+ , - , * , / , % , percent]: ");
+                    decimal firstNumber = valueManipulator.GetUserValueByMessage("Welcome to  Calculator Application,\nEnter first number: ");
+                    string option=valueManipulator.GetInputByMessageToAction("Choose operation that you need [+ , - , * , / , % , percent]: ");
                     if (option == "percent")
                     {
-                        decimal secondNumber = ValueManipulatR.GetUserValueByMessage("\nPlease enter the Percent: ");
+                        decimal secondNumber = valueManipulator.GetUserValueByMessage("\nPlease enter the Percent: ");
                         var calculator = new AdvancedCalculator(firstNumber,option,secondNumber);
                         break;
                     }
                     else
                     {
-                        decimal secondNumber = ValueManipulatR.GetUserValueByMessage("\nSecond number: ");
-                        var calculatR = new CalculatR(firstNumber, option, secondNumber);
+                        decimal secondNumber = valueManipulator.GetUserValueByMessage("\nSecond number: ");
+                        new CalculatR(firstNumber, option, secondNumber);
                         break;
                     }
                 
                 case 2 :
-                    MultiplicationTableR.ShowMultiplicationTable();
+                    multiplicationTable.ShowMultiplicationTable();
                     reportR.ShowGratitude();
                     break;
                 
@@ -44,10 +45,9 @@ namespace Calculator
             }
             
             Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Do you want to continue : [y/n]");
-                yesOrno = Console.ReadLine()!;
+            Console.WriteLine("Do you want to continue : [y/n]");
+            yesOraNo = Console.ReadLine()!;
             Console.ResetColor();
-            } while (yesOrno == "y");
-        }
+        } while (yesOraNo == "y");
     }
 }

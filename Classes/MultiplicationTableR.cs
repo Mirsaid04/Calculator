@@ -1,8 +1,8 @@
 namespace Calculator.Classes;
 
-public class MultiplicationTableR
+internal class MultiplicationTableR : IMultiplicationTableR
 {
-    public static void ShowMultiplicationTable()
+    public void ShowMultiplicationTable()
     {
         Console.WriteLine("\nWelcome to multiplication table");
         System.Console.WriteLine("Enter the number that you want to know it's multiplication table\n");
