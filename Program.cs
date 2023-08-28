@@ -9,32 +9,35 @@ namespace Calculator
     {
          static void Main()
          {
-             IReportingContract reportR = new ReportR();
             string yesOrno = "";
             do
             {
-                ValueManipulatR.ShowMenu();
+                IValueManipulator valueManipulator = new ValueManipulatR();
+                IReportingContract reportR = new ReportR();
+                IMultiplicationTableR multiplicationTable = new MultiplicationTableR();
+                valueManipulator.ShowMenu();
+                
             int choiceOfOption = ReportR.choseedNumberConverted();
             switch (choiceOfOption)
             {
                 case 1 :
-                    decimal firstNumber = ValueManipulatR.GetUserValueByMessage("Welcome to  Calculator Application,\nEnter first number: ");
-                    string option=ValueManipulatR.GetInputByMessageToAction("Choose operation that you need [+ , - , * , / , % , percent]: ");
+                    decimal firstNumber = valueManipulator.GetUserValueByMessage("Welcome to  Calculator Application,\nEnter first number: ");
+                    string option=valueManipulator.GetInputByMessageToAction("Choose operation that you need [+ , - , * , / , % , percent]: ");
                     if (option == "percent")
                     {
-                        decimal secondNumber = ValueManipulatR.GetUserValueByMessage("\nPlease enter the Percent: ");
+                        decimal secondNumber = valueManipulator.GetUserValueByMessage("\nPlease enter the Percent: ");
                         var calculator = new AdvancedCalculator(firstNumber,option,secondNumber);
                         break;
                     }
                     else
                     {
-                        decimal secondNumber = ValueManipulatR.GetUserValueByMessage("\nSecond number: ");
+                        decimal secondNumber = valueManipulator.GetUserValueByMessage("\nSecond number: ");
                         var calculatR = new CalculatR(firstNumber, option, secondNumber);
                         break;
                     }
                 
                 case 2 :
-                    MultiplicationTableR.ShowMultiplicationTable();
+                    multiplicationTable.ShowMultiplicationTable();
                     reportR.ShowGratitude();
                     break;
                 
